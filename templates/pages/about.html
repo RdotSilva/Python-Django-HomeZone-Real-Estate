@@ -1,6 +1,105 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
-<h1>About</h1>
-  <p>About Page</p>
+  <section id="showcase-inner" class="py-5 text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1 class="display-4">About Home Zone</h1>
+          <p class="lead">Find out what makes us unique.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <section id="bc" class="mt-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'index' %}">
+              <i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="breadcrumb-item active"> About</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <section id="about" class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>We search. You relax.</h2>
+          <p class="lead">Let us do the hard work for you. Don't stress over finding your next home.</p>
+          <img src="{% static 'img/about.jpg' %}" alt="">
+          <p class="mt-4">You start by signing up for an account. Once you start entering search data that is where the magic happens. Our patented algorithm uses your criteria to find the perfect home based on what you want. No more wasting time with junk listings that you have no interest in. Let us do the heavy lifting while you relax!</p>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="assets/img/realtors/kyle.jpg" alt="Seller of the month">
+            <div class="card-body">
+              <h5 class="card-title">Seller Of The Month</h5>
+              <h6 class="text-secondary">Kyle Brown</h6>
+              <p class="card-text">Dedicated to customer service, Kyle has helped link over 50 customers with their perfect home.
+                content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="bg-dark text-white text-center">
+    <h2 class="display-4">We Work For You</h2>
+    <h4>We take pride in making it easy and effortless to find your new home. Let us get you in the Home Zone!</h4>
+    <hr>
+    <a href="listings.html" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="py-5">
+    <div class="container">
+      <h2 class="text-center">Our Team</h2>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <img src="assets/img/realtors/kyle.jpg" alt="" class="rounded-circle mb-3">
+          <h4>Kyle Brown</h4>
+          <p class="text-success">
+            <i class="fas fa-award text-success mb-3"></i> Realtor</p>
+          <hr>
+          <p>
+            <i class="fas fa-phone"></i> (555)-555-5555</p>
+          <p>
+            <i class="fas fa-envelope-open"></i> kyle@btrealestate.co</p>
+        </div>
+
+        <div class="col-md-4">
+          <img src="assets/img/realtors/mark.jpg" alt="" class="rounded-circle mb-3">
+          <h4>Mark Hudson</h4>
+          <p class="text-success">Realtor</p>
+          <hr>
+          <p>
+            <i class="fas fa-phone"></i> (444)-444-4444</p>
+          <p>
+            <i class="fas fa-envelope-open"></i> mark@btrealestate.co</p>
+        </div>
+
+        <div class="col-md-4">
+          <img src="assets/img/realtors/jenny.jpg" alt="" class="rounded-circle mb-3">
+          <h4>Jenny Johnson</h4>
+          <p class="text-success">Realtor</p>
+          <hr>
+          <p>
+            <i class="fas fa-phone"></i> (333)-333-3333</p>
+          <p>
+            <i class="fas fa-envelope-open"></i> jenny@btrealestate.co</p>
+        </div>
+      </div>
+    </div>
+  </section>
 {% endblock content %}
-<h1>About</h1>
+
