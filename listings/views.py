@@ -6,9 +6,12 @@ from django.shortcuts import render
 
 
 def index(request):
-    render(request, 'listings/listings.html')
+    return render(request, 'listings/listings.html')
 
 
 def listing(request):
-    render(request, 'listings/listing.html')
+    return render(request, 'listings/listing.html')
 
+
+def search(request):
+    return render(request, 'listings/search.html')
