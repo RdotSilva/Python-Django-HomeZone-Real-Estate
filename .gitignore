@@ -10,3 +10,4 @@ venv
 .vscode
 .prettierignore
 /static
+secret.py
