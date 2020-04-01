@@ -29,5 +29,6 @@ class Listing(models.Model):
     is_published = models.BooleanField(default=True)
     list_date = models.DateTimeField(default=datetime.now, blank=True)
 
+    # This is what is displayed as text in the admin page
     def __str__(self):
         return self.title
