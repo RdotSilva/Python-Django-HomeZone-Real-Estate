@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
 from .models import Listing
 
@@ -11,9 +12,14 @@ def index(request):
     # Fetch all of the listings
     listings = Listing.objects.all()
 
+    # Pagination
+    paginator = Paginator(listings, 3)
+    page = request.GET.get('page')
+    paged_listings = paginator.get_page(page)
+
     # Create context to pass into the render method below
     context = {
-        'listings': listings
+        'listings': paged_listings
     }
 
     return render(request, 'listings/listings.html', context)
