@@ -31,7 +31,15 @@
     <section id="listings" class="py-4">
       <div class="container">
         <div class="row">
-          
+          {% if listings %}
+            {% for listing in listings %}
+            
+            {% endfor %}
+          {% else %}
+            <div class="call-md-12">
+              <p>No Listings Available</p>
+            </div>
+          {% endif %}
         </div>
   
         <div class="row">
