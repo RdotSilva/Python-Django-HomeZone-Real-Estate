@@ -89,9 +89,10 @@
   
         <div class="row">
           <div class="col-md-12">
-            <ul class="pagination">
-              
-            </ul>
+            {% if listings.has_other_pages %}
+              <ul class="pagination">
+              </ul>
+            {% endif %}
           </div>
         </div>
       </div>
