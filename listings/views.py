@@ -19,7 +19,8 @@ def index(request):
     return render(request, 'listings/listings.html', context)
 
 
-def listing(request):
+def listing(request, listing_id):
+    # Listing_id is passed in from the listings.html file when the link is clicked
     return render(request, 'listings/listing.html')
 
 
