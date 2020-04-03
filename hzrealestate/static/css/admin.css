@@ -7,3 +7,19 @@
 #branding h1 {
   color: #fff;
 }
+
+a:link,
+a:visited {
+  color: #10284e;
+}
+
+/* Breadcrumbs background */
+div.breadcrumbs {
+  background: #30caa0;
+  color: #10284e;
+}
+
+/* Breadcrumbs links */
+div.breadcrumbs a {
+  color: #333;
+}
