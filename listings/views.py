@@ -9,8 +9,8 @@ from .models import Listing
 
 
 def index(request):
-    # Fetch all of the listings
-    listings = Listing.objects.all()
+    # Fetch all of the listings ordered by list date desc
+    listings = Listing.objects.order_by('-list_date')
 
     # Pagination
     paginator = Paginator(listings, 3)
