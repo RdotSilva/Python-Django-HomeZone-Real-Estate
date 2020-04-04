@@ -3,6 +3,7 @@ from django.http import HttpResponse
 
 # Models
 from listings.models import Listing
+from realtors.models import Realtor
 
 
 def index(request):
@@ -17,4 +18,6 @@ def index(request):
 
 
 def about(request):
+    # Fetch all realtors ordered by hire date
+    realtors = Realtor.objects.order_by('-hire_date')
     return render(request, 'pages/about.html')
