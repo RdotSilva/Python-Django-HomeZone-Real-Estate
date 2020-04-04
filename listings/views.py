@@ -9,8 +9,8 @@ from .models import Listing
 
 
 def index(request):
-    # Fetch all of the listings ordered by list date desc
-    listings = Listing.objects.order_by('-list_date')
+    # Fetch all of the listings ordered by list date desc. Filter results to published only.
+    listings = Listing.objects.order_by('-list_date').filter(is_published=True)
 
     # Pagination
     paginator = Paginator(listings, 3)
