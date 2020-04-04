@@ -36,7 +36,11 @@
           <img src="{% static 'img/about.jpg' %}" alt="">
           <p class="mt-4">You start by signing up for an account. Once you start entering search data that is where the magic happens. Our patented algorithm uses your criteria to find the perfect home based on what you want. No more wasting time with junk listings that you have no interest in. Let us do the heavy lifting while you relax!</p>
         </div>
-        
+        {% if mvp_realtors %}
+          {% for realtor in mvp_realtors %}
+          
+          {% endfor %}
+        {% endif %}
       </div>
     </div>
   </section>
