@@ -65,6 +65,15 @@
     <div class="container">
       <h2 class="text-center">Our Team</h2>
       <div class="row text-center">
+        {% if realtors %}
+          {% for realtor in realtors %}
+            
+          {% endfor %}
+        {% else %}
+          <div class="col-md-12">
+            <p>No Team Members Available</p>
+          </div>
+        {% endif %}
         <div class="col-md-4">
           <img src="assets/img/realtors/kyle.jpg" alt="" class="rounded-circle mb-3">
           <h4>Kyle Brown</h4>
