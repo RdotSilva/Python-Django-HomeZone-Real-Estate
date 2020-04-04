@@ -20,4 +20,8 @@ def index(request):
 def about(request):
     # Fetch all realtors ordered by hire date
     realtors = Realtor.objects.order_by('-hire_date')
+
+    # Get MVP
+    mvp_realtors = Realtor.objects.all().filter(is_mvp=True)
+
     return render(request, 'pages/about.html')
