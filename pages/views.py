@@ -24,4 +24,9 @@ def about(request):
     # Get MVP
     mvp_realtors = Realtor.objects.all().filter(is_mvp=True)
 
-    return render(request, 'pages/about.html')
+    context = {
+        'realtors': realtors,
+        'mvp_realtors': mvp_realtors
+    }
+
+    return render(request, 'pages/about.html', context)
