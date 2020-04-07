@@ -50,6 +50,13 @@ def search(request):
             queryset_list = queryset_list.filter(
                 description__icontains=keywords)
 
+    # City search field
+    # Using "iexact" to get exact match (case insensitive)
+    if 'city' in request.GET:
+        city = request.GET['city']
+        if city:
+            queryset_list = queryset_list.filter(city__iexact=city)
+
     context = {
         'state_choices': state_choices,
         'bedroom_choices': bedroom_choices,
