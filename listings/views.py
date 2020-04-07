@@ -40,11 +40,13 @@ def listing(request, listing_id):
 
 
 def search(request):
+    queryset_list = Listing.objects.order_by('-list_date')
 
     context = {
         'state_choices': state_choices,
         'bedroom_choices': bedroom_choices,
-        'price_choices': price_choices
+        'price_choices': price_choices,
+        'listings': queryset_list
     }
 
     return render(request, 'listings/search.html', context)
