@@ -64,6 +64,13 @@ def search(request):
         if state:
             queryset_list = queryset_list.filter(state__iexact=state)
 
+    # Bedrooms search field
+    # Using "lte" for less than or equal to number of required bedrooms
+    if 'bedrooms' in request.GET:
+        bedrooms = request.GET['bedrooms']
+        if bedrooms:
+            queryset_list = queryset_list.filter(bedrooms__lte=bedrooms)
+
     context = {
         'state_choices': state_choices,
         'bedroom_choices': bedroom_choices,
