@@ -30,6 +30,9 @@
                   <label class="sr-only">State</label>
                   <select name="state" class="form-control">
                     <option selected="true" disabled="disabled">State (All)</option>
+                    {% for key, value in state_choices.items %}
+                      <option value="{{ key }}">{{ value }}</option>
+                    {% endfor %}
                   </select>
                 </div>
               </div>
