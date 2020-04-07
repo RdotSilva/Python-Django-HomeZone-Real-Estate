@@ -78,11 +78,13 @@ def search(request):
         if price:
             queryset_list = queryset_list.filter(price__lte=price)
 
+    # "values" is being used to repopulate the search form fields after search is made
     context = {
         'state_choices': state_choices,
         'bedroom_choices': bedroom_choices,
         'price_choices': price_choices,
-        'listings': queryset_list
+        'listings': queryset_list,
+        'values': request.GET
     }
 
     return render(request, 'listings/search.html', context)
