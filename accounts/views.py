@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 
 def register(request):
     if request.method == 'POST':
+        # TODO: Test alert error output here
         print('SUBMITTED REG')
         return redirect('register')
     else:
