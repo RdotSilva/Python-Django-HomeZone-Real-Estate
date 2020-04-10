@@ -10,7 +10,11 @@ def register(request):
 
 
 def login(request):
-    return render(request, 'accounts/login.html')
+    if request.method == 'POST':
+        # TODO: Add user login
+        return
+    else:
+        return render(request, 'accounts/login.html')
 
 
 def logout(request):
