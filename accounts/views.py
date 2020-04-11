@@ -33,6 +33,11 @@ def register(request):
                     # auth.login(request, user)
                     # messages.success(request, 'You are now logged in!')
                     # return redirect('/index')
+
+                    user.save()
+                    messages.success(
+                        request, 'You are now registered, please login')
+                    return redirect('login')
         else:
             messages.error(request, 'Passwords must match')
             return redirect('register')
