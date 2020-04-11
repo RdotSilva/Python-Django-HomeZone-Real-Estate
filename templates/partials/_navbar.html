@@ -50,6 +50,11 @@
           >
             <a class="nav-link" href="{% url 'dashboard' %}"> Welcome {{ user.username }} - Dashboard</a>
           </li>
+          <li class="nav-item mr-3">
+            <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link">
+              <i class="fas-fa-sign-out-alt"></i> Logout
+            </a>
+          </li>
         {% else %}
           <li
           {% if 'register' in request.path %}
