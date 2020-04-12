@@ -2,6 +2,19 @@
 
 Full stack web application created using Python with Django. HomeZone is a real estate marketplace where users can go to buy, sell and rent homes.
 
+### Prerequisites
+
+You must create a config file with your PostgreSQL login details
+
+1. Create a new file in the root folder named: secret.py
+
+2. Add your PostgreSQL username and password
+
+```
+USERNAME=username
+PASS=password
+```
+
 ## Starting Django Server
 
 Run the python script command in terminal to start the Django server
@@ -14,6 +27,7 @@ python manage.py runserver
 
 - Python 3.7
 - Django 3.0.4
+- PostgreSQL
 
 ## Screenshots
 
