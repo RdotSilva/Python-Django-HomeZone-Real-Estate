@@ -65,6 +65,11 @@ def login(request):
 
 
 def logout(request):
+    # Check for post request and log user out
+    if request.method == 'POST':
+        auth.logout(request)
+        messages.success(request, 'You have been logged out')
+        redirect('index')
     return redirect('index')
 
 
