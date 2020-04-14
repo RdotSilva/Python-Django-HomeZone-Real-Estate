@@ -171,6 +171,11 @@
         <div class="modal-body">
           <form action="{% url 'contact' %}" method="POST">
             {% csrf_token %}
+            {% if user.is_authenticated %}
+              <input type="hidden" name="user_id" value="{{ user.id }}">
+            {% else %}
+              <input type="hidden" name="user_id" value="0">
+            {% endif %} 
             <div class="form-group">
               <label for="property_name" class="col-form-label">Property:</label>
               <input type="text" name="listing" class="form-control" value="{{ listing.title }}" disabled>
