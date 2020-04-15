@@ -177,7 +177,7 @@
               <input type="hidden" name="user_id" value="0">
             {% endif %} 
             <input type="hidden" name="realtor_email" value="{{ listing.realtor.email }}">
-            <!-- TODO: Add hidden inputs for remaining values to send in form-->
+            <input type="hidden" name="realtor_email" value="{{ listing.id }}">
             <div class="form-group">
               <label for="property_name" class="col-form-label">Property:</label>
               <input type="text" name="listing" class="form-control" value="{{ listing.title }}" disabled>
