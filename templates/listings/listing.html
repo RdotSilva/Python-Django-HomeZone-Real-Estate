@@ -184,7 +184,9 @@
             </div>
             <div class="form-group">
               <label for="name" class="col-form-label">Name:</label>
-              <input type="text" name="name" class="form-control" required>
+              <input type="text" name="name" class="form-control" {% if user.is_authenticated %}
+              value="{{ user.name}}"
+              {% endif %} required>
             </div>
             <div class="form-group">
               <label for="email" class="col-form-label">Email:</label>
