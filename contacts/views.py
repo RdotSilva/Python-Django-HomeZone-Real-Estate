@@ -8,6 +8,7 @@ def contact(request):
         # Fetch the hidden fields
         listing_id = request.POST['listing_id']
         listing = request.POST['listing']
+        name = request.POST['name']
         email = request.POST['email']
         phone = request.POST['phone']
         message = request.POST['message']
