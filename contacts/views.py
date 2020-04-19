@@ -15,12 +15,14 @@ def contact(request):
         user_id = request.POST['user_id']
         realtor_email = request.POST['realtor_email']
 
+        # Create the contact using the fields above
         contact = Contact(listing=listing, listing_id=listing_id, name=name,
                           email=email, phone=phone, message=message, user_id=user_id)
-
+        # Save contact to db
         contact.save()
 
         messages.success(
             request, 'Your request has been submitted, a realtor will get back to you soon!')
 
+        # Redirect user to original listing page after form is submitted
         return redirect('listing', listing_id=listing_id)
