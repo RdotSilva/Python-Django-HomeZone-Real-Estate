@@ -20,6 +20,10 @@ def contact(request):
             user_id = request.user.id
             has_contacted = Contact.objects.all().filter(
                 listing_id=listing_id, user_id=user_id)
+            if has_contacted:
+                messages.error(
+                    request, 'You have already made an inquiry for this listing')
+                return redirect('listing', listing_id=listing_id)
 
         # Create the contact using the fields above
         contact = Contact(listing=listing, listing_id=listing_id, name=name,
