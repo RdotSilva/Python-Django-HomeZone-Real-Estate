@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
 from .models import Contact
 
 
@@ -17,3 +18,6 @@ def contact(request):
                           email=email, phone=phone, message=message, user_id=user_id)
 
         contact.save()
+
+        messages.success(
+            request, 'Your request has been submitted, a realtor will get back to you soon!')
