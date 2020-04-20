@@ -144,3 +144,6 @@ MEDIA_URL = '/media/'
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
+
+# Email config
+# TODO: Set up email configuration for contact inquiry
