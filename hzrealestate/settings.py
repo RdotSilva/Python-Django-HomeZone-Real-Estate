@@ -146,8 +146,8 @@ MESSAGE_TAGS = {
 }
 
 # Email config
-# TODO: Set up email configuration for contact inquiry
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = EMAIL_USER
 EMAIL_HOST_PASSWORD = EMAIL_PASS
+EMAIL_USE_TLS = True
