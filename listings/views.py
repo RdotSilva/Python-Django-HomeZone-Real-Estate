@@ -71,6 +71,13 @@ def search(request):
         if bedrooms:
             queryset_list = queryset_list.filter(bedrooms__lte=bedrooms)
 
+    # Bathrooms search field
+    # Using "lte" for less than or equal to number of required bedrooms
+    if 'bathrooms' in request.GET:
+        bathrooms = request.GET['bathrooms']
+        if bathrooms:
+            queryset_list = queryset_list.filter(bathrooms__lte=bathrooms)
+
     # Price search field
     # Using "lte" for less than or equal to number of required bedrooms
     if 'price' in request.GET:
