@@ -15,6 +15,13 @@ USERNAME=username
 PASS=password
 ```
 
+3. Add email host username and password (this is used for sending out contact inquiry emails to realtors)
+
+```
+EMAIL_USER=username
+EMAIL_PASS=password
+```
+
 ## Starting Django Server
 
 Run the python script command in terminal to start the Django server
