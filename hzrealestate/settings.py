@@ -14,7 +14,7 @@ from django.contrib.messages import constants as messages
 import os
 
 # Imports from secret file, you need to create this and add your db info
-from secret import USERNAME, PASS
+from secret import USERNAME, PASS, EMAIL_USER, EMAIL_PASS
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -149,3 +149,5 @@ MESSAGE_TAGS = {
 # TODO: Set up email configuration for contact inquiry
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
+EMAIL_HOST_USER = EMAIL_USER
+EMAIL_HOST_PASSWORD = EMAIL_PASS
