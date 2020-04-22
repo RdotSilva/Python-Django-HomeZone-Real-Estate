@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
-from .choices import price_choices, bedroom_choices, state_choices
+from .choices import price_choices, bedroom_choices, state_choices, bathroom_choices
 
 from .models import Listing
 
@@ -89,6 +89,7 @@ def search(request):
     context = {
         'state_choices': state_choices,
         'bedroom_choices': bedroom_choices,
+        'bathroom_choices': bathroom_choices,
         'price_choices': price_choices,
         'listings': queryset_list,
         'values': request.GET
