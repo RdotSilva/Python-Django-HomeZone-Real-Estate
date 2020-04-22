@@ -54,11 +54,15 @@
                 </select>
               </div>
               <div class="col-md-3 mb-3">
-                <label class="sr-only">Bathrooms</label>
+                <label class="sr-only">Bedrooms</label>
                 <select name="bathrooms" class="form-control">
                   <option selected="true" disabled="disabled">Bathrooms (Min)</option>
                   {% for key, value in bathroom_choices.items %}
-                    <option value="{{ key }}">{{ value }}</option>
+                    <option value="{{ key }}" 
+                      {% if key == values.bathrooms %}
+                        selected
+                      {% endif %}
+                    >{{ value }}</option>
                   {% endfor %}
                 </select>
               </div>
