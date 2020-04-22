@@ -53,6 +53,15 @@
                   {% endfor %}
                 </select>
               </div>
+              <div class="col-md-3 mb-3">
+                <label class="sr-only">Bathrooms</label>
+                <select name="bathrooms" class="form-control">
+                  <option selected="true" disabled="disabled">Bathrooms (Min)</option>
+                  {% for key, value in bathroom_choices.items %}
+                    <option value="{{ key }}">{{ value }}</option>
+                  {% endfor %}
+                </select>
+              </div>
               <!-- TODO: Update search form for bathrooms. Already updated in main page search, however you do a search to find more listings, the search form shown is not updated-->
               <div class="col-md-6 mb-3">
                 <select name="price" class="form-control">
